@@ -1,38 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-</head>
-<body>
-    <input type="text" name="" id="equation" placeholder="0" disabled>
-    <br>
-    <input type="text" name="" id="result"  disabled>
-    <br>
-    <input type="button" value="7">
-    <input type="button" value="8">
-    <input type="button" value="9">
-    <input type="button" value="/">
-    <br>
-    <input type="button" value="4">
-    <input type="button" value="5">
-    <input type="button" value="6">
-    <input type="button" value="*">
-    <br>
-    <input type="button" value="1">
-    <input type="button" value="2">
-    <input type="button" value="3">
-    <input type="button" value="-">
-    <br>
-    <input type="button" value="-/+">
-    <input type="button" value="0">
-    <input type="button" value=".">
-    <input type="button" value="+">
-    <br>
-    <input type="button" value="C">
-    <input type="button" value="=">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Calculator</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-dark fixed-top p-3">
+            <div class="container-fluid  justify-content-center">
+                <span class="navbar-brand fw-bold fs-3">Calculator</span>
+            </div>
+        </nav>
+        <div class="container-fluid d-flex justify-content-center page-content">
+            <div class="row-cols-1 justify-content-md-center">
+                <label>Input</label>
+                <input class="mb-3 input-group-text" type="text" name="" id="equation" placeholder="0" disabled>
+                <label>Result</label>
+                <input class="mb-3 input-group-text" type="text" name="" id="equation" placeholder="0" disabled>
+                <div class="row-cols-5">
+                    <input type="button" class="btn btn-secondary mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3" value="7">
+                    <input type="button" class="btn btn-secondary mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3" value="8">
+                    <input type="button" class="btn btn-secondary mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3" value="9">                    
+                    <input type="button" class="btn btn-dark mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3" value="/">
+                </div>
+                <div class="row-cols-5">
+                    <input type="button" class="btn btn-secondary mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3" value="4">
+                    <input type="button" class="btn btn-secondary mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3" value="5">
+                    <input type="button" class="btn btn-secondary mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3" value="6">
+                    <input type="button" value="*" class="btn btn-dark mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3" >
+                </div>
+                <div class="row-cols-5">
+                    <input type="button" class="btn btn-secondary mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3" value="1">
+                    <input type="button" class="btn btn-secondary mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3" value="2">
+                    <input type="button" class="btn btn-secondary mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3" value="3">
+                    <input type="button" value="-" class="btn btn-dark mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3" >
+                </div>
 
-
-</body>
+                <div class="row-cols-5">
+                    <input type="button" class="btn btn-secondary mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3" value="0">
+                    <input type="button" class="btn btn-secondary mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3" value=".">
+                    <input type="button" class="btn btn-secondary mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3" value="=">
+                    <input type="button" value="+" class="btn btn-dark mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3" >                    
+                </div>
+            </div>
+        </div>
+    </body>
 </html>

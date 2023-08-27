@@ -3,9 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
         <title>Calculator</title>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.min.js"
+            integrity="sha512-iphNRh6dPbeuPGIrQbCdbBF/qcqadKWLa35YPVfMZMHBSI6PLJh1om2xCTWhpVpmUyb4IvVS9iYnnYMkleVXLA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     </head>
     <body>
         <nav class="navbar navbar-dark bg-dark fixed-top p-3">
@@ -13,38 +18,42 @@
                 <span class="navbar-brand fw-bold fs-3">Calculator</span>
             </div>
         </nav>
-        <div class="container-fluid d-flex justify-content-center page-content">
+        <div class="container-fluid d-flex justify-content-center page-content ">
             <div class="row-cols-1 justify-content-md-center">
                 <label>Input</label>
-                <input class="mb-3 input-group-text" type="text" name="" id="equation" placeholder="0" disabled>
+                <input class="mb-2 my-input-group-text col-11" type="text" name="" id="equation" placeholder="0" disabled>
                 <label>Result</label>
-                <input class="mb-3 input-group-text" type="text" name="" id="equation" placeholder="0" disabled>
-                <div class="row-cols-5">
-                    <input type="button" class="btn btn-secondary mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3" value="7">
-                    <input type="button" class="btn btn-secondary mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3" value="8">
-                    <input type="button" class="btn btn-secondary mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3" value="9">                    
-                    <input type="button" class="btn btn-dark mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3" value="/">
+                <div class="">
+                    <input class="my-input-group-text mb-3 col-8" type="text" name="" id="result" placeholder="0" disabled>
+                    <input type="button" class="col-2 btn btn-dark mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3" id="clear" value="C">
                 </div>
                 <div class="row-cols-5">
-                    <input type="button" class="btn btn-secondary mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3" value="4">
-                    <input type="button" class="btn btn-secondary mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3" value="5">
-                    <input type="button" class="btn btn-secondary mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3" value="6">
-                    <input type="button" value="*" class="btn btn-dark mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3" >
+                    <input type="button" class="btn btn-secondary mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3 num" value="7">
+                    <input type="button" class="btn btn-secondary mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3 num" value="8">
+                    <input type="button" class="btn btn-secondary mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3 num" value="9">                    
+                    <input type="button" class="btn btn-dark mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3 op" value="/">
                 </div>
                 <div class="row-cols-5">
-                    <input type="button" class="btn btn-secondary mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3" value="1">
-                    <input type="button" class="btn btn-secondary mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3" value="2">
-                    <input type="button" class="btn btn-secondary mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3" value="3">
-                    <input type="button" value="-" class="btn btn-dark mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3" >
+                    <input type="button" class="btn btn-secondary mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3 num" value="4">
+                    <input type="button" class="btn btn-secondary mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3 num" value="5">
+                    <input type="button" class="btn btn-secondary mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3 num" value="6">
+                    <input type="button" class="btn btn-dark mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3 op" value="*">
+                </div>
+                <div class="row-cols-5">
+                    <input type="button" class="btn btn-secondary mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3 num" value="1">
+                    <input type="button" class="btn btn-secondary mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3 num" value="2">
+                    <input type="button" class="btn btn-secondary mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3 num" value="3">
+                    <input type="button" class="btn btn-dark mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3 op" value="-">
                 </div>
 
                 <div class="row-cols-5">
-                    <input type="button" class="btn btn-secondary mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3" value="0">
+                    <input type="button" class="btn btn-secondary mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3 num" value="0">
                     <input type="button" class="btn btn-secondary mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3" value=".">
-                    <input type="button" class="btn btn-secondary mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3" value="=">
-                    <input type="button" value="+" class="btn btn-dark mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3" >                    
+                    <input type="button" class="btn btn-secondary mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3" id="getRes" value="=">
+                    <input type="button" class="btn btn-dark mt-3 pt-2 pb-2 ps-5 pe-5 fw-bold fs-3 op" value="+">                    
                 </div>
             </div>
         </div>
+        <script src="js/main.js"></script>
     </body>
 </html>
